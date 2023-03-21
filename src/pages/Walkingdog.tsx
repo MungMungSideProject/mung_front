@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Walkingdog = () => {
-  return <div>Walkingdog</div>;
+  return <div className="h-screen w-full bg-amber-300">Walkning</div>;
 };
 
 export default Walkingdog;
