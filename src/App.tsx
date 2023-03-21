@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import '@/index.css';
-import MungWiki from '@components/mungWiki';
+import MungWiki from '@components/mungWiki/MungWiki';
 
 function App() {
   return <MungWiki />;
