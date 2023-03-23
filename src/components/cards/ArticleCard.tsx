@@ -13,7 +13,7 @@ const ArticleCard = () => {
   };
 
   return (
-    <div className="flex aspect-square h-full w-full cursor-pointer flex-col overflow-hidden rounded-3xl shadow-sm">
+    <div className="relative flex aspect-square h-full w-full cursor-pointer flex-col overflow-hidden rounded-3xl shadow-sm">
       <div className="relative h-1/2 w-full overflow-hidden">
         {!imageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -29,14 +29,14 @@ const ArticleCard = () => {
           onLoad={handleImageLoad}
         />
       </div>
-      <div className="h-1/2 w-full p-2">
-        <div className="flex h-1/2 w-full flex-col gap-2 overflow-hidden">
+      <div className="flex h-1/2 w-full flex-col items-stretch p-3">
+        <div className="flex h-full w-full flex-col gap-2 overflow-hidden">
           <h1 className="text-xl xl:text-3xl">Name</h1>
           <p className="text-base text-slate-400 xl:text-lg">
             Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc
           </p>
         </div>
-        <div className="flex h-1/2 w-full items-center justify-between">
+        <div className="flex h-1/3 w-full items-center justify-between">
           <p className="text-base text-slate-400 xl:text-lg">Author</p>
           <p className="text-base text-slate-400 xl:text-lg">Date</p>
         </div>
