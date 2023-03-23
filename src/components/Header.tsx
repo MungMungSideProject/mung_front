@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 box-border flex h-header w-full items-center justify-between bg-white px-baseLR">
+      <div className="fixed top-0 box-border flex h-header w-full items-center justify-between bg-white px-baseX">
         <div className="flex items-center justify-center">
           <Link to={'/'}>
             <h1 className="cursor-pointer font-Ubuntu text-5xl">MungMung</h1>
