@@ -3,9 +3,23 @@
  *  The second half is for the title, description, author, and date of the article.
  */
 
-import React, { useState } from 'react';
+interface ArticleCardProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  author: string;
+  date: string;
+}
 
-const ArticleCard = () => {
+import { useState } from 'react';
+
+const ArticleCard = ({
+  imageUrl,
+  title,
+  description,
+  author,
+  date,
+}: ArticleCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleImageLoad = () => {
@@ -22,7 +36,7 @@ const ArticleCard = () => {
         )}
         <img
           alt=""
-          src="https://source.unsplash.com/random?q=50"
+          src={imageUrl ? imageUrl : 'https://source.unsplash.com/random?q=50'}
           className={`absolute inset-0 h-full w-full object-cover ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
@@ -31,14 +45,22 @@ const ArticleCard = () => {
       </div>
       <div className="flex h-1/2 w-full flex-col items-stretch p-3">
         <div className="flex h-full w-full flex-col gap-2 overflow-hidden">
-          <h1 className="text-xl xl:text-3xl">Name</h1>
+          <h1 className="text-xl xl:text-3xl">{title ? title : 'Title'}</h1>
           <p className="text-base text-slate-400 xl:text-lg">
-            Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc
+            {description
+              ? description.length > 30
+                ? description.substring(0, 50) + '...'
+                : description
+              : 'description section'}
           </p>
         </div>
         <div className="flex h-1/3 w-full items-center justify-between">
-          <p className="text-base text-slate-400 xl:text-lg">Author</p>
-          <p className="text-base text-slate-400 xl:text-lg">Date</p>
+          <p className="text-base text-slate-400 xl:text-lg">
+            {author ? author : 'author section'}
+          </p>
+          <p className="text-base text-slate-400 xl:text-lg">
+            {date ? date : 'date section'}
+          </p>
         </div>
       </div>
     </div>
