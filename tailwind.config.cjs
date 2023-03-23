@@ -7,7 +7,8 @@ module.exports = {
         header: '8vh',
       },
       padding: {
-        baseLR: '5vw',
+        baseX: '15vw',
+        baseY: '3vh',
       },
       fontFamily: {
         Ubuntu: ['Ubuntu', 'sans-serif'],
@@ -15,6 +16,7 @@ module.exports = {
       colors: {
         accent: '#5F9DF7',
         error: '#ff5c00',
+        defaultBg: '#fcfcfc',
       },
     },
   },
