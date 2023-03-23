@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 box-border flex h-header w-full items-center justify-between bg-white px-baseX">
+      <div className="fixed top-0 z-header box-border flex h-header w-full items-center justify-between bg-white px-baseX">
         <div className="flex items-center justify-center">
           <Link to={'/'}>
             <h1 className="cursor-pointer font-Ubuntu text-5xl">MungMung</h1>
@@ -17,7 +17,9 @@ const Header = () => {
         </div>
         <div className="flex items-center justify-between gap-x-[3vw] text-2xl">
           <div className={`${itemClass}`}>멍멍위키</div>
-          <div className={`${itemClass}`}>산책인증</div>
+          <div className={`${itemClass}`}>
+            <Link to={'/walking'}>산책인증</Link>
+          </div>
           <div className={`${itemClass}`}>애견컬럼</div>
           <div className="cursor-pointer">
             <BsSearch />

@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       height: {
         header: '8vh',
+        wholeScreen: '92vh',
       },
       padding: {
         baseX: '15vw',
@@ -17,6 +18,9 @@ module.exports = {
         accent: '#5F9DF7',
         error: '#ff5c00',
         defaultBg: '#fcfcfc',
+      },
+      zIndex: {
+        header: 50,
       },
     },
   },
