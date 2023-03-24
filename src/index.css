@@ -14,3 +14,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+/* Pagination의 현재 page를 표시해주는 css */
+button[aria-current='page'] {
+  background-color: black;
+  color: white;
+}

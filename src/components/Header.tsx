@@ -16,7 +16,9 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center justify-between gap-x-[3vw] text-2xl">
-          <div className={`${itemClass}`}>멍멍위키</div>
+          <Link to={'/wiki'}>
+            <div className={`${itemClass}`}>멍멍위키</div>
+          </Link>
           <div className={`${itemClass}`}>산책인증</div>
           <div className={`${itemClass}`}>애견컬럼</div>
           <div className="cursor-pointer">

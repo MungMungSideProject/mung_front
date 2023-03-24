@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
+import Pagination from './pagination/Pagination';
 
 interface dogData {
   id: number;
@@ -39,30 +40,64 @@ const MungWiki = () => {
       img: '',
       name: '랙돌',
     },
+    {
+      id: 7,
+      img: '',
+      name: '닥스훈트',
+    },
+    {
+      id: 8,
+      img: '',
+      name: '말티푸',
+    },
+    {
+      id: 9,
+      img: '',
+      name: '비숑프리제',
+    },
+    {
+      id: 10,
+      img: '',
+      name: '스피츠',
+    },
+    {
+      id: 11,
+      img: '',
+      name: '시츄',
+    },
   ]);
+
+  const [limit, setLimit] = useState(10); // 한 페이지에 보여줄 데이터 개수
+  const [page, setPage] = useState(1); // 페이지 초기값 1
+  const offset = (page - 1) * limit; // 게시물의 첫 위치 번호 찾기
 
   return (
     <>
-      <div className="m-auto mt-40 w-[1000px]">
+      <div className="m-auto mt-40 w-3/4">
         <form className="relative m-auto w-fit ">
           <input
             className="h-[40px] w-[300px] rounded-full border-2 border-solid border-black pl-7 text-xl"
             placeholder="검색어를 입력해주세요"
           />
-          <buttom className="absolute right-7 top-3.5 ">
+          <button className="absolute right-7 top-3.5 ">
             <FiSearch className="h-[20px] w-[20px] cursor-pointer text-black" />
-          </buttom>
+          </button>
         </form>
-        <div className="mt-20 grid grid-cols-5 gap-10 pt-20">
-          {dogList.map((item) => (
-            <>
-              <div key={item.id} className="w-[180px] text-center text-xl">
-                <div className="h-[180px] w-[180px] cursor-pointer rounded-[15px] bg-slate-200"></div>
-                <p className="mt-3 mb-10">{item.name}</p>
-              </div>
-            </>
+        <div className="m-auto mt-20 grid h-[400px] w-[650px] grid-cols-5 gap-10 pt-20">
+          {/* ex) 1번째 페이지엔 0부터 9까지의 게시물 보여주기 */}
+          {dogList.slice(offset, offset + limit).map((item) => (
+            <div key={item.id} className="h-fit w-fit text-center text-xl">
+              <div className="h-[120px] w-[120px] cursor-pointer gap-2 rounded-[15px] bg-slate-200"></div>
+              <p className="mt-3">{item.name}</p>
+            </div>
           ))}
         </div>
+        <Pagination
+          total={dogList.length}
+          limit={limit}
+          page={page}
+          setPage={setPage}
+        />
       </div>
     </>
   );
