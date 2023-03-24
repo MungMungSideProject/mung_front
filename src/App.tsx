@@ -4,6 +4,7 @@ import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import Walkingdog from './pages/Walkingdog';
 import Header from '@components/Header';
+import MungWiki from '@components/MungWiki';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/walking" element={<Walkingdog />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/wiki" element={<MungWiki />} />
       </Routes>
     </BrowserRouter>
   );
