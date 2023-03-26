@@ -31,7 +31,7 @@ const Pagination = ({ total, limit, page, setPage }: list): JSX.Element => {
         <div className="mx-4 text-xl">
           {Array(numPages)
             .fill(null)
-            .map((_, i) => (
+            .map((_, i: number) => (
               <button
                 key={i}
                 onClick={() => setPage(i + 1)}

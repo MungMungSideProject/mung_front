@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
-import Pagination from './pagination/Pagination';
+import { Link } from 'react-router-dom';
+import Pagination from '../pagination/Pagination';
 
 interface dogData {
   id: number;
@@ -69,11 +70,11 @@ const MungWiki = () => {
 
   const [limit, setLimit] = useState(10); // 한 페이지에 보여줄 데이터 개수
   const [page, setPage] = useState(1); // 페이지 초기값 1
-  const offset = (page - 1) * limit; // 게시물의 첫 위치 번호 찾기
+  const offset: number = (page - 1) * limit; // 게시물의 첫 위치 번호 찾기
 
   return (
     <>
-      <div className="m-auto mt-40 w-3/4">
+      <div className="m-auto mt-40 w-fit">
         <form className="relative m-auto w-fit ">
           <input
             className="h-[40px] w-[300px] rounded-full border-2 border-solid border-black pl-7 text-xl"
@@ -83,12 +84,14 @@ const MungWiki = () => {
             <FiSearch className="h-[20px] w-[20px] cursor-pointer text-black" />
           </button>
         </form>
-        <div className="m-auto mt-20 grid h-[400px] w-[650px] grid-cols-5 gap-10 pt-20">
+        <div className="mx-6 my-20 grid h-[400px] w-[700px] grid-cols-5 gap-10 pt-20">
           {/* ex) 1번째 페이지엔 0부터 9까지의 게시물 보여주기 */}
-          {dogList.slice(offset, offset + limit).map((item) => (
-            <div key={item.id} className="h-fit w-fit text-center text-xl">
-              <div className="h-[120px] w-[120px] cursor-pointer gap-2 rounded-[15px] bg-slate-200"></div>
-              <p className="mt-3">{item.name}</p>
+          {dogList.slice(offset, offset + limit).map((item, id) => (
+            <div key={id} className="h-fit w-fit text-center text-xl">
+              <Link to={`/wikiDetail/${id}`}>
+                <div className="h-[120px] w-[120px] cursor-pointer gap-2 rounded-[15px] bg-slate-200"></div>
+                <p className="mt-3">{item.name}</p>
+              </Link>
             </div>
           ))}
         </div>
