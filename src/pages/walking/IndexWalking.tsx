@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ArticleCard from '@components/cards/ArticleCard';
 import { getWalking } from '@/apis/api/walking';
+import { Link } from 'react-router-dom';
 
 interface Walkingdog {
   id: number;
@@ -12,7 +13,7 @@ interface Walkingdog {
   voted: number;
 }
 
-const Walkingdog = () => {
+const IndexWalking = () => {
   const pageTitleClassName = 'text-3xl font-bold text-black';
   const pageFilterClassName = 'text-xl xl:text-2xl font-bold text-black';
   const [posts, setPosts] = useState<Walkingdog[] | undefined>(undefined);
@@ -28,14 +29,16 @@ const Walkingdog = () => {
   }, []);
 
   return (
-    <div className="flex h-wholeScreen w-full flex-col gap-8 bg-defaultBg px-baseX py-baseY">
+    <div className="flex h-wholeScreen w-full flex-col gap-8  bg-defaultBg px-baseX py-baseY">
       <div className="flex w-full items-center justify-between">
         <h1 className={pageTitleClassName}>산책인증</h1>
         <div
           className={`flex w-1/5 items-center justify-between ${pageFilterClassName}`}
         >
           <div className="cursor-pointer hover:text-accent">
-            <h3>글쓰기</h3>
+            <Link to={'/walking/newpost'}>
+              <h3>글쓰기</h3>
+            </Link>
           </div>
           <div className="cursor-pointer hover:text-accent">
             <h3>최신순</h3>
@@ -68,4 +71,4 @@ const Walkingdog = () => {
   );
 };
 
-export default Walkingdog;
+export default IndexWalking;
