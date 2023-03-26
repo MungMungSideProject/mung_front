@@ -26,10 +26,7 @@ const NewPost = () => {
          */}
         <div className="flex w-2/3 flex-col p-5">
           <form className="flex w-full flex-col">
-            <InputBase placeholder="제목" />
-            <InputBase placeholder="제목" />
-            <InputBase placeholder="제목" />
-            <InputBase placeholder="제목" />
+            <InputBase label="제목" type={'text'} />
           </form>
         </div>
       </div>
