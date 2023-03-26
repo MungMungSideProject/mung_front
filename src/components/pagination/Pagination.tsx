@@ -21,7 +21,7 @@ const Pagination = ({ total, limit, page, setPage }: list): JSX.Element => {
     setPage(page + 1);
   };
 
-  console.log(page);
+  console.log(`현재 페이지: ${page}page`);
   return (
     <>
       <div className="m-auto mt-28 flex w-fit">
