@@ -11,3 +11,8 @@ html {
 
   word-break: keep-all;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
