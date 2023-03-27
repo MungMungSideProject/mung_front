@@ -33,7 +33,7 @@ const ArticleCard = ({
       <div className="relative h-1/2 w-full overflow-hidden">
         {!imageLoaded && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-gray-400"></div>
+            <div className="border-gray-400 h-8 w-8 animate-spin rounded-full border-2"></div>
           </div>
         )}
         <img

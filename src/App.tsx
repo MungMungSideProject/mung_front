@@ -7,6 +7,7 @@ import Header from '@components/Header';
 import MungWiki from '@components/MungWiki';
 import IndexWalking from './pages/walking/IndexWalking';
 import NewPost from './pages/walking/NewPost';
+import ReadPost from './pages/walking/ReadPost';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/wiki" element={<MungWiki />} />
         <Route path="/walking" element={<IndexWalking />} />
+        <Route path="/walking/posts/:id" element={<ReadPost />} />
         <Route path="/walking/newpost" element={<NewPost />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
