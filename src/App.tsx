@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Walkingdog from './pages/Walkingdog';
 import Header from '@components/Header';
 import MungWiki from '@components/MungWiki';
+import IndexWalking from './pages/walking/IndexWalking';
+import NewPost from './pages/walking/NewPost';
 
 function App() {
   return (
@@ -12,9 +14,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/walking" element={<Walkingdog />} />
-        <Route path="/*" element={<NotFound />} />
         <Route path="/wiki" element={<MungWiki />} />
+        <Route path="/walking" element={<IndexWalking />} />
+        <Route path="/walking/newpost" element={<NewPost />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
