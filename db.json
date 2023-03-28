@@ -63,5 +63,117 @@
       "date": "2023-01-07",
       "voted": 98
     }
+  ],
+  "wiki": [
+    {
+      "id": 20,
+      "name": "말티푸",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 21,
+      "name": "포메라니안",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/bcZypJrMnfNpZ4PifKqbpfwlLmS2A_vo3Q3tO1u0KLnl9Q1pg4NuRyc91Tc4eOuH6SaioG1nFUYjx0Z4IfNHszIinenkyE5xCNXqxUtJnP5YGnJC69UUUHdPiEVVsORdZTL-_xGsIMlRWX8-JOfd9A.webp",
+      "IQ": 60,
+      "tameLevell": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 22,
+      "name": "웰시코기",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 23,
+      "name": "슈나우저",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 24,
+      "name": "리트리버",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 25,
+      "name": "닥스훈트",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 26,
+      "name": "푸들",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 27,
+      "name": "스피츠",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 28,
+      "name": "시츄",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 29,
+      "name": "달마시안",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    },
+    {
+      "id": 30,
+      "name": "말티즈",
+      "description": "상세설명",
+      "imageUrl": "https://i.namu.wiki/i/BApyJijmgT7WSUYsgaM9ySdwshUufrgwI-EdlFSaNQ3ZMzWS8mQKRpJ1OEDT--7ot0m7NepH-vkekU4pHdio7thOkv7ZP2zbxhk-xVIsJ4TxWCO81CRy6xzJKZaaDHoeXa2ukIc-g83XpeeVuVp5kw.webp",
+      "IQ": 60,
+      "tameLevel": 70,
+      "activity": 80,
+      "adaptability": 90
+    }
   ]
 }

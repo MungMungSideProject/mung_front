@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/wiki" element={<MungWiki />} />
-        <Route path="/wikiDetail/:id" element={<WikiDetail />} />
+        <Route path="/wiki/:id" element={<WikiDetail />} />
         <Route path="/walking" element={<Walkingdog />} />
         <Route path="/walking" element={<IndexWalking />} />
         <Route path="/walking/newpost" element={<NewPost />} />

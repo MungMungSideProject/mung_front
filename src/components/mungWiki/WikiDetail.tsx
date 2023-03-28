@@ -1,24 +1,43 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
+export interface listDetailType {
+  id: number;
+  name: string;
+  description: string;
+  imageUrl: string;
+  IQ: number;
+  tameLevel: number;
+  activity: number;
+  adaptability: number;
+}
 
 const WikiDetail = () => {
-  const params = useParams();
-  const dogId = params.id;
+  const location = useLocation();
+  const dog = location.state.dogList;
+  console.log(dog);
+  console.log(location);
 
   return (
     <>
       <div className="m-auto mt-40 flex w-fit">
-        <div className="mr-20 h-[200px] w-[200px] gap-2 rounded-[15px] bg-slate-200"></div>
+        <img
+          src={dog.imageUrl}
+          className="mr-20 h-[200px] w-[200px] gap-2 rounded-[15px] bg-slate-200 object-cover"
+        />
         <div className="pt-4">
-          <p className="mb-16">이름</p>
+          <p className="mb-16">
+            {dog.id}
+            {dog.name}
+          </p>
           <div>
-            <div>지능</div>
-            <div>길들이기</div>
-            <div>활동성</div>
-            <div>실내 적응력</div>
+            <div>지능: {dog.IQ}</div>
+            <div>길들이기: {dog.tameLevel}</div>
+            <div>활동성: {dog.activity}</div>
+            <div>실내 적응력: {dog.adaptability}</div>
           </div>
         </div>
       </div>
-      <div className="m-auto mt-40 flex w-fit">상세설명</div>
+      <div className="m-auto mt-40 flex w-fit">{dog.description}</div>
     </>
   );
 };
