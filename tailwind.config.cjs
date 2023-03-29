@@ -23,6 +23,7 @@ module.exports = {
       },
       zIndex: {
         header: 50,
+        modal: 70,
       },
       fontSize: {
         pageTitle: '3rem',
