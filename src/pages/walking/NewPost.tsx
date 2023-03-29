@@ -12,7 +12,6 @@ interface PostProps {
 
 const NewPost = () => {
   const pageTitleClassName = 'text-pageTitle font-bold text-black';
-  const formItemTitleClassName = 'text-formItemTitle font-bold text-black';
 
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [postData, setPostData] = useState<PostProps>({
@@ -38,13 +37,13 @@ const NewPost = () => {
 
   return (
     <>
-      <form className="flex  w-full flex-col gap-10 px-baseX py-baseY">
+      <form className="flex w-full flex-col gap-10 px-baseX py-baseY">
         <h1 className={`${pageTitleClassName}`}>게시글 등륵</h1>
         <div className="flex w-full justify-between gap-12">
           {/**
            * @description Image Section
            */}
-          <div className="box-border flex w-1/3 min-w-[300px] flex-col gap-y-8 ">
+          <div className="box-border flex w-1/3 min-w-[400px] flex-col gap-y-8 ">
             <input
               className="hidden"
               type={'file'}

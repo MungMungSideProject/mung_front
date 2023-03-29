@@ -53,16 +53,18 @@ const IndexWalking = () => {
         <div className="row-auto grid h-fit w-full grid-cols-4 gap-5">
           {posts.map((item: Walkingdog, index: number) => {
             return (
-              <ArticleCard
-                key={index}
-                id={item.id}
-                title={item.title}
-                description={item.description}
-                imageUrl={item.imageUrl}
-                author={item.author}
-                date={item.date}
-                voted={item.voted}
-              />
+              <Link to={`/walking/posts/${item.id}`} key={index}>
+                <ArticleCard
+                  key={index}
+                  id={item.id}
+                  title={item.title}
+                  description={item.description}
+                  imageUrl={item.imageUrl}
+                  author={item.author}
+                  date={item.date}
+                  voted={item.voted}
+                />
+              </Link>
             );
           })}
         </div>
