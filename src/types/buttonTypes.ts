@@ -1,6 +1,14 @@
 import { ButtonHTMLAttributes } from 'react';
 
-type Variant = 'default' | 'success' | 'warning' | 'error' | 'disabled';
+type Variant =
+  | 'default'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'disabled'
+  | 'login'
+  | 'signup';
+
 type Size = 'sm' | 'md' | 'lg' | 'xl';
 
 /**
