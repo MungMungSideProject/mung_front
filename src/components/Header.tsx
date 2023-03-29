@@ -5,21 +5,27 @@ import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 import BaseButton from './buttons/BaseButton';
 import HeaderGuard from './HeaderGuard';
-import LoginModal from './modals/ModalBase';
-import TempTesting from './modals/TempTesting';
+import ModalBase from './modals/ModalBase';
+import { useModal } from '@/hooks/useModal';
+import LogIn from './modals/LogIn';
 
 const Header = () => {
-  const [{ isOpen, title, content }, setModalContent] =
-    useRecoilState(modalState);
+  const {
+    modalDataState: { isOpen },
+    openModal,
+    closeModal,
+  } = useModal();
 
   const itemClass = 'flex justify-center items-center cursor-pointer';
 
   /**
    * @description 모달을 열고 닫는 함수
    */
-  const toggleModal = () => {
-    console.log('wow');
-    setModalContent((prev) => ({ ...prev, isOpen: !prev.isOpen }));
+  const handleOpenModal = () => {
+    openModal({
+      title: '로그인',
+      content: <LogIn />,
+    });
   };
 
   useEffect(() => {
@@ -44,7 +50,7 @@ const Header = () => {
             <BsSearch />
           </div>
           <div>
-            <BaseButton size="md" onClick={toggleModal}>
+            <BaseButton size="md" onClick={handleOpenModal}>
               로그인
             </BaseButton>
           </div>
@@ -55,12 +61,7 @@ const Header = () => {
        */}
       <HeaderGuard />
       {/* 모달 컴포넌트 추가 */}
-      <LoginModal
-        isOpen={isOpen}
-        title={title}
-        content={<TempTesting />}
-        onClose={toggleModal}
-      />
+      <ModalBase />
     </>
   );
 };
