@@ -6,6 +6,8 @@ const variantClasses = {
   warning: 'bg-error hover:bg-opacity-75',
   error: 'bg-error hover:bg-opacity-75',
   disabled: 'bg-gray-400 cursor-not-allowed !text-black',
+  login: 'bg-accent hover:bg-opacity-75',
+  signup: 'bg-error hover:bg-opacity-75',
 };
 
 const sizeClasses = {

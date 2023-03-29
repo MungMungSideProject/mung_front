@@ -48,5 +48,23 @@ export const useModal = () => {
     [setModalDataState]
   );
 
-  return { modalDataState, closeModal, openModal };
+  /**
+   * @description Modal의 내용을 변경하는 함수, 모달이 열려있는 상태에서 변경 가능
+   * @param title {string} Modal의 제목
+   * @param content {JSX Element} Modal의 내용 컴포넌트가 들어가며 모달창의 컨텐츠가 됨
+   */
+  const changeModal = useCallback(
+    ({ title, content }: OpenModalProps) => {
+      setModalDataState((prev) => {
+        return {
+          ...prev,
+          title,
+          content,
+        };
+      });
+    },
+    [setModalDataState]
+  );
+
+  return { modalDataState, closeModal, openModal, changeModal };
 };

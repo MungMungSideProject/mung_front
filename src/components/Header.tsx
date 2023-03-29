@@ -28,10 +28,6 @@ const Header = () => {
     });
   };
 
-  useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
-
   return (
     <>
       <div className="fixed top-0 z-header box-border flex h-header w-full items-center justify-between bg-white px-baseX">
