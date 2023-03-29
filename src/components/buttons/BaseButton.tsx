@@ -20,16 +20,18 @@ const BaseButton = ({
   size,
   fullWidth,
   children,
+  ...props
 }: ButtonBasePropsOptional) => {
   const variantClass = variantClasses[variant!];
   const sizeClass = sizeClasses[size!];
   const fullSizeClass = fullWidth ? 'w-full' : null;
   return (
-    <div
+    <button
+      {...props}
       className={`relative box-border flex min-w-[64px] cursor-pointer select-none items-center justify-center gap-1 text-ellipsis whitespace-nowrap rounded-lg text-white transition-all ${fullSizeClass} ${sizeClass} ${variantClass}`}
     >
       {children}
-    </div>
+    </button>
   );
 };
 
