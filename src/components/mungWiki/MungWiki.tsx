@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { FiSearch } from 'react-icons/fi';
+import { BsStar } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Pagination from '../pagination/Pagination';
 import { getWiki } from '@/apis/api/wiki';
-import { defaultInstance } from '@/apis/utils/instances';
 
 export interface DogListType {
   id: number;
@@ -30,7 +30,7 @@ const MungWiki = () => {
 
   return (
     <>
-      <div className="m-auto mt-40 w-fit">
+      <div className="m-auto mt-40 w-2/3">
         <form className="relative m-auto w-fit ">
           <input
             className="h-[40px] w-[300px] rounded-full border-2 border-solid border-black pl-7 text-xl"
@@ -40,22 +40,37 @@ const MungWiki = () => {
             <FiSearch className="h-[20px] w-[20px] cursor-pointer text-black" />
           </button>
         </form>
-        <div className="mx-6 my-20 grid h-[400px] w-[800px] grid-cols-5 gap-5 pt-20">
-          {/* ex) 1번째 페이지엔 0부터 9까지의 게시물 보여주기 */}
-          {dogList.slice(offset, offset + limit).map((item, id) => (
-            <div key={id} className="h-fit w-fit text-center text-xl">
-              {/* 해당 id에 맞는 state props로 전달 */}
-              <Link to={`/wiki/${id}`} state={{ dogList: item }}>
-                <img
-                  src={item.imageUrl}
-                  className="h-[140px] w-[140px] cursor-pointer gap-2 rounded-[15px] bg-slate-200 object-cover"
-                  alt="image"
-                />
-                <p className="mt-3 mb-7">{item.name}</p>
-              </Link>
-            </div>
-          ))}
+        <div>
+          <label className="mt-20 flex w-[700px] justify-end text-xl">
+            <select>
+              <option>이름순</option>
+              <option>소형견</option>
+              <option>중형견</option>
+              <option>대형견</option>
+            </select>
+          </label>
+          <div className="mx-6 mb-20 grid h-[400px] w-[700px] grid-cols-5 gap-5 pt-20">
+            {/* ex) 1번째 페이지엔 0부터 9까지의 게시물 보여주기 */}
+            {dogList.slice(offset, offset + limit).map((item, id) => (
+              <div
+                key={id}
+                className="relative h-fit w-fit text-center text-xl"
+              >
+                <BsStar className="absolute top-3 right-3 cursor-pointer text-white opacity-70 active:fill-black" />
+                {/* 해당 id에 맞는 state props로 */}
+                <Link to={`/wiki/${id}`} state={{ dogList: item }}>
+                  <img
+                    src={item.imageUrl}
+                    className="h-[140px] min-h-[100px] w-[140px] cursor-pointer gap-2 rounded-[10px] bg-slate-200 object-cover"
+                    alt="image"
+                  />
+                  <p className="mt-3 mb-7">{item.name}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
+
         <Pagination
           total={dogList.length}
           limit={limit}

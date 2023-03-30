@@ -8,12 +8,3 @@ export const getWiki = async () => {
     console.log(error);
   }
 };
-
-export const getWikiDetail = async ({ id }: any) => {
-  try {
-    const response = await defaultInstance.get(`/wiki/${id}`);
-    return response.data;
-  } catch (error) {
-    console.log(error);
-  }
-};
