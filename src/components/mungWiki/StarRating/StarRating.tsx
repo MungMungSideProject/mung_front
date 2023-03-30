@@ -7,9 +7,9 @@ const StarReview = () => {
   const [ratingState, setRatingState] = useState(ratingArray);
   const [hoverValue, setHoverValue] = useState(null);
 
-  // 클릭된 별들은 true로
   const RatingClick = (idx: number) => {
     const tempRatingState = [...ratingState];
+
     for (let i = 0; i < 5; i++) {
       tempRatingState[i] = i <= idx ? true : false;
     }
@@ -20,6 +20,7 @@ const StarReview = () => {
   const handleMouseOver = (value: any) => {
     setHoverValue(value + 1);
   };
+
   // 벗어나면 null값
   const handleMouseLeave = () => {
     setHoverValue(null);
@@ -31,13 +32,18 @@ const StarReview = () => {
         return (
           <button key={i}>
             <FaStar
-              onClick={() => RatingClick(i)}
-              onMouseOver={() => handleMouseOver(i)}
+              className={`
+                text-3xl
+                ${ratingState[i] && 'text-[#5F9DF7]'}
+                ${hoverValue! > i ? 'text-accent' : 'text-slate-200'}
+                `}
+              onMouseOver={() => {
+                handleMouseOver(i);
+              }}
               onMouseLeave={handleMouseLeave}
-              className={`text-3xl text-slate-200
-              ${ratingState[i] && 'text-accent'}
-              ${hoverValue! > i ? 'text-accent/75' : 'text-slate-200'}
-              `}
+              onClick={() => {
+                RatingClick(i);
+              }}
             />
           </button>
         );

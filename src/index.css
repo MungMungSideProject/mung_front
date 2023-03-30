@@ -22,3 +22,8 @@ button[aria-current='page'] {
   background-color: black;
   color: white;
 }
+
+/* 모달창 띄웠을 때 스크롤 방지 */
+body.modal-open {
+  overflow: hidden;
+}

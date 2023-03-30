@@ -8,6 +8,7 @@ import WikiDetail from '@components/mungWiki/WikiDetail';
 import Header from '@components/Header';
 import IndexWalking from './pages/walking/IndexWalking';
 import NewPost from './pages/walking/NewPost';
+import ReadPost from './pages/walking/ReadPost';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/wiki/:id" element={<WikiDetail />} />
         <Route path="/walking" element={<Walkingdog />} />
         <Route path="/walking" element={<IndexWalking />} />
+        <Route path="/walking/posts/:id" element={<ReadPost />} />
         <Route path="/walking/newpost" element={<NewPost />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>

@@ -5,10 +5,10 @@ module.exports = {
     extend: {
       height: {
         header: '8vh',
+        wholeScreen: '92vh',
       },
       padding: {
         baseLR: '5vw',
-        wholeScreen: '92vh',
         baseX: '15vw',
         baseY: '3vh',
       },
@@ -24,11 +24,13 @@ module.exports = {
       },
       zIndex: {
         header: 50,
+        modal: 70,
       },
       fontSize: {
         pageTitle: '3rem',
         formItemTitle: '2.2rem',
         inputText: '1.8rem',
+        readPostDescription: '2rem',
       },
     },
   },
