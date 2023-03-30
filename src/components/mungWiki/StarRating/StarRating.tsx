@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 
-const StarReview = () => {
+const StarRating = () => {
   const ratingArray: Array<boolean> = [false, false, false, false, false];
 
   const [ratingState, setRatingState] = useState(ratingArray);
   const [hoverValue, setHoverValue] = useState(null);
 
+  // click시 0부터 반복하며 클릭된 별만큼 true로 바뀌도록
   const RatingClick = (idx: number) => {
     const tempRatingState = [...ratingState];
 
@@ -33,9 +34,9 @@ const StarReview = () => {
           <button key={i}>
             <FaStar
               className={`
-                text-3xl
+                text-4xl
                 ${ratingState[i] && 'text-[#5F9DF7]'}
-                ${hoverValue! > i ? 'text-accent' : 'text-slate-200'}
+                ${hoverValue! > i ? 'text-accent/75' : 'text-slate-200'}
                 `}
               onMouseOver={() => {
                 handleMouseOver(i);
@@ -52,4 +53,4 @@ const StarReview = () => {
   );
 };
 
-export default StarReview;
+export default StarRating;

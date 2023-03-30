@@ -30,6 +30,7 @@ module.exports = {
         pageTitle: '3rem',
         formItemTitle: '2.2rem',
         inputText: '1.8rem',
+        postContents: '1.4rem',
         readPostDescription: '2rem',
       },
     },

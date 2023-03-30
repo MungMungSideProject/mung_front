@@ -9,6 +9,7 @@ import Header from '@components/Header';
 import IndexWalking from './pages/walking/IndexWalking';
 import NewPost from './pages/walking/NewPost';
 import ReadPost from './pages/walking/ReadPost';
+import WikiComments from '@components/mungWiki/WikiComment';
 
 function App() {
   return (
@@ -17,7 +18,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/wiki" element={<MungWiki />} />
-        <Route path="/wiki/:id" element={<WikiDetail />} />
+        <Route path="/wiki/:id" element={<WikiDetail />}>
+          <Route path="/wiki/:id/comments" element={<WikiComments />} />
+        </Route>
         <Route path="/walking" element={<Walkingdog />} />
         <Route path="/walking" element={<IndexWalking />} />
         <Route path="/walking/posts/:id" element={<ReadPost />} />
