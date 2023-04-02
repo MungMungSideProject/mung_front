@@ -8,6 +8,7 @@ module.exports = {
         wholeScreen: '92vh',
       },
       padding: {
+        baseLR: '5vw',
         baseX: '15vw',
         baseY: '3vh',
       },
@@ -29,6 +30,7 @@ module.exports = {
         pageTitle: '3rem',
         formItemTitle: '2.2rem',
         inputText: '1.8rem',
+        postContents: '1.4rem',
         readPostDescription: '2rem',
       },
     },
