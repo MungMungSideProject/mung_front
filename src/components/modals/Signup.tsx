@@ -19,7 +19,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="mt-[10%]">
       <form className="w-full">
         <div className="flex flex-col">
           <InputBase label="이메일" type="email" name="email" fullWidth />

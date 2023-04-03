@@ -7,10 +7,12 @@ module.exports = {
         header: '8vh',
         wholeScreen: '92vh',
       },
+      margin: {},
       padding: {
         baseX: '15vw',
         baseY: '3vh',
       },
+
       fontFamily: {
         Ubuntu: ['Ubuntu', 'sans-serif'],
       },
@@ -27,7 +29,7 @@ module.exports = {
       },
       fontSize: {
         pageTitle: '3rem',
-        formItemTitle: '2.2rem',
+        formItemTitle: ['1.6rem', '1.8rem', '2rem', '2.2rem'],
         inputText: '1.8rem',
         readPostDescription: '2rem',
       },

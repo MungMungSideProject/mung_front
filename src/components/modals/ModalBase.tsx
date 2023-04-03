@@ -44,7 +44,7 @@ const ModalBase = () => {
       className=" fixed inset-0 z-modal flex items-center justify-center bg-black bg-opacity-50"
       onClick={handleBackgroundClick}
     >
-      <div className="h-1/2 w-3/4 overflow-auto rounded-3xl bg-white p-12 md:w-1/2 lg:w-1/3">
+      <div className="min-h-1/2 max-h-[75%] w-3/4 overflow-auto rounded-3xl bg-white p-12 md:w-1/2 lg:w-1/3">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-formItemTitle font-semibold">{title}</h2>
           <button
