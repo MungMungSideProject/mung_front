@@ -44,19 +44,21 @@ const LogIn = () => {
           onChange={handleChange}
           value={formData.password}
         />
-        <BaseButton variant="login" size="xl" fullWidth>
-          <p className="text-xl">로그인</p>
-        </BaseButton>
-        <BaseButton
-          variant="signup"
-          size="xl"
-          fullWidth
-          onClick={() =>
-            changeModal({ title: '회원가입', content: <Signup /> })
-          }
-        >
-          <p className="text-xl">회원가입</p>
-        </BaseButton>
+        <div className="flex flex-col gap-4">
+          <BaseButton variant="login" size="xl" fullWidth>
+            <p className="text-xl">로그인</p>
+          </BaseButton>
+          <BaseButton
+            variant="signup"
+            size="xl"
+            fullWidth
+            onClick={() =>
+              changeModal({ title: '회원가입', content: <Signup /> })
+            }
+          >
+            <p className="text-xl">회원가입</p>
+          </BaseButton>
+        </div>
       </form>
     </div>
   );
